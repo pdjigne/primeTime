@@ -1,0 +1,20 @@
+// Declare an arbitrary number, n
+const n = 4;
+
+// Function to check if a number is prime
+function isPrime(num) {
+  for (let i = 2, sqrt = Math.sqrt(num); i <= sqrt; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
+
+// Loop to find the next prime number starting from n
+for (let i = n + 1; ; i++) {
+  if (isPrime(i)) {
+    console.log(i);
+    break;
+  }
+}
